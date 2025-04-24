@@ -1,0 +1,39 @@
+{
+	"DYNAMIC_PEOPLE": [
+		"Sarah Chen",
+		"Mark Johnson",
+		"Priya Patel",
+		"Alex Rodriguez",
+		"David Wong",
+		"Elena Vasquez",
+		"Rajiv Patel",
+		"Michelle Kim",
+		"Jameson Li",
+		"Sabrina Patel",
+		"Harriet Song"
+	],
+	"DYNAMIC_ORG": [
+		"Bankcorp, Inc",
+		"BigCorp",
+		"Tech Innovations Ltd",
+		"Global Solutions",
+		"Data Systems Inc"
+	],
+	"DYNAMIC_COUNTRIES": [
+		"United States",
+		"Canada",
+		"United Kingdom",
+		"France",
+		"Germany",
+		"Japan",
+		"China",
+		"India",
+		"Australia",
+		"Brazil",
+		"Mexico",
+		"South Africa",
+		"Russia",
+		"Italy",
+		"Spain"
+	]
+}
