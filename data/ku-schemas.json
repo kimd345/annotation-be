@@ -1,139 +1,157 @@
 [
-	{
-		"frameLabel": "Employment",
-		"frameId": "employment",
-		"fields": [
-			{
-				"name": "Person",
-				"id": "person",
-				"type": ["LIST_PERSON"],
-				"required": true,
-				"multiple": false
-			},
-			{
-				"name": "Company",
-				"id": "company",
-				"type": ["LIST_COMPANY"],
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Title",
-				"id": "title",
-				"type": "string",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Department",
-				"id": "dept",
-				"type": "string",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Time",
-				"id": "time",
-				"type": "CUSTOM_DATE",
-				"required": false,
-				"multiple": false
-			}
-		]
-	},
-	{
-		"frameLabel": "Sentiment",
-		"frameId": "sentiment",
-		"fields": [
-			{
-				"name": "By",
-				"id": "by",
-				"type": ["DYNAMIC_PEOPLE"],
-				"required": true,
-				"multiple": false
-			},
-			{
-				"name": "Towards",
-				"id": "towards",
-				"type": ["DYNAMIC_PEOPLE", "DYNAMIC_ORG", "string"],
-				"required": true,
-				"multiple": true
-			},
-			{
-				"name": "Polarity",
-				"id": "polarity",
-				"type": ["positive", "negative", "neutral"],
-				"required": true,
-				"multiple": false
-			},
-			{
-				"name": "When",
-				"id": "when",
-				"type": "CUSTOM_DATE",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Location",
-				"id": "location",
-				"type": "CUSTOM_LOCATION",
-				"required": false,
-				"multiple": false
-			}
-		]
-	},
-	{
-		"frameLabel": "Project",
-		"frameId": "project",
-		"fields": [
-			{
-				"name": "Name",
-				"id": "name",
-				"type": "string",
-				"required": true,
-				"multiple": false
-			},
-			{
-				"name": "Leader",
-				"id": "leader",
-				"type": ["DYNAMIC_PEOPLE"],
-				"required": true,
-				"multiple": false
-			},
-			{
-				"name": "Team Members",
-				"id": "team",
-				"type": ["DYNAMIC_PEOPLE"],
-				"required": false,
-				"multiple": true
-			},
-			{
-				"name": "Budget",
-				"id": "budget",
-				"type": "integer",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Timeline",
-				"id": "timeline",
-				"type": "string",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "Start Date",
-				"id": "startDate",
-				"type": "CUSTOM_DATE",
-				"required": false,
-				"multiple": false
-			},
-			{
-				"name": "End Date",
-				"id": "endDate",
-				"type": "CUSTOM_DATE",
-				"required": false,
-				"multiple": false
-			}
-		]
-	}
+  {
+    "frameLabel": "Employment",
+    "frameId": "employment",
+    "fields": [
+      {
+        "name": "Person",
+        "id": "person",
+        "type": [
+          "LIST_PERSON"
+        ],
+        "required": true,
+        "multiple": false
+      },
+      {
+        "name": "Company",
+        "id": "company",
+        "type": [
+          "LIST_COMPANY"
+        ],
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Title",
+        "id": "title",
+        "type": "string",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Department",
+        "id": "dept",
+        "type": "string",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Time",
+        "id": "time",
+        "type": "CUSTOM_DATE",
+        "required": false,
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "frameLabel": "Sentiment",
+    "frameId": "sentiment",
+    "fields": [
+      {
+        "name": "By",
+        "id": "by",
+        "type": [
+          "DYNAMIC_PEOPLE"
+        ],
+        "required": true,
+        "multiple": false
+      },
+      {
+        "name": "Towards",
+        "id": "towards",
+        "type": [
+          "DYNAMIC_PEOPLE",
+          "DYNAMIC_ORG",
+          "string"
+        ],
+        "required": true,
+        "multiple": true
+      },
+      {
+        "name": "Polarity",
+        "id": "polarity",
+        "type": [
+          "positive",
+          "negative",
+          "neutral"
+        ],
+        "required": true,
+        "multiple": false
+      },
+      {
+        "name": "When",
+        "id": "when",
+        "type": "CUSTOM_DATE",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Location",
+        "id": "location",
+        "type": "CUSTOM_LOCATION",
+        "required": false,
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "frameLabel": "Project",
+    "frameId": "project",
+    "fields": [
+      {
+        "name": "Name",
+        "id": "name",
+        "type": "string",
+        "required": true,
+        "multiple": false
+      },
+      {
+        "name": "Leader",
+        "id": "leader",
+        "type": [
+          "DYNAMIC_PEOPLE"
+        ],
+        "required": true,
+        "multiple": false
+      },
+      {
+        "name": "Team Members",
+        "id": "team",
+        "type": [
+          "DYNAMIC_PEOPLE"
+        ],
+        "required": false,
+        "multiple": true
+      },
+      {
+        "name": "Budget",
+        "id": "budget",
+        "type": "integer",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Timeline",
+        "id": "timeline",
+        "type": "string",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "Start Date",
+        "id": "startDate",
+        "type": "CUSTOM_DATE",
+        "required": false,
+        "multiple": false
+      },
+      {
+        "name": "End Date",
+        "id": "endDate",
+        "type": "CUSTOM_DATE",
+        "required": false,
+        "multiple": false
+      }
+    ]
+  }
 ]

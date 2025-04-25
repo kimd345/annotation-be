@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 
 // Paths
-const frontendDir = path.join(__dirname, '../src');
+const frontendDir = path.join(__dirname, '../annotation-app/src');
 const backendDataDir = path.join(__dirname, 'data');
 const frontendTxtDir = path.join(frontendDir, 'lib/txt');
 const backendDocumentsDir = path.join(backendDataDir, 'documents');
@@ -35,7 +35,7 @@ async function migrateData() {
 			// Convert TypeScript to JSON (very simplified approach)
 			const schemasJson = eval(`(${schemasStr})`);
 			await fs.writeJson(
-				path.join(backendDataDir, 'schemas.json'),
+				path.join(backendDataDir, 'ku-schemas.json'),
 				schemasJson,
 				{ spaces: 2 }
 			);
@@ -52,7 +52,7 @@ async function migrateData() {
 			);
 			const customFieldsJson = eval(`(${customFieldsStr})`);
 			await fs.writeJson(
-				path.join(backendDataDir, 'customFields.json'),
+				path.join(backendDataDir, 'custom-fields.json'),
 				customFieldsJson,
 				{ spaces: 2 }
 			);
@@ -69,7 +69,7 @@ async function migrateData() {
 			);
 			const dynamicListsJson = eval(`(${dynamicListsStr})`);
 			await fs.writeJson(
-				path.join(backendDataDir, 'dynamicLists.json'),
+				path.join(backendDataDir, 'dynamic-lists.json'),
 				dynamicListsJson,
 				{ spaces: 2 }
 			);

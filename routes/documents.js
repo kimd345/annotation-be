@@ -6,7 +6,7 @@ const {
 	getAllDocuments,
 	markDocumentsWithAnnotations,
 	dataDir,
-} = require('../utils/fileUtils');
+} = require('../utils/file-utils');
 
 const router = express.Router();
 

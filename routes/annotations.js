@@ -36,9 +36,11 @@ router.post('/', async (req, res) => {
 		if (existingIndex !== -1) {
 			// Update existing KU
 			knowledgeUnits[existingIndex] = newKU;
+			console.log(`Updated knowledge unit: ${newKU.id}`);
 		} else {
 			// Add new KU
 			knowledgeUnits.push(newKU);
+			console.log(`Created new knowledge unit: ${newKU.id}`);
 		}
 
 		await writeJsonFile(path.join(dataDir, 'annotations.json'), knowledgeUnits);
@@ -46,35 +48,6 @@ router.post('/', async (req, res) => {
 	} catch (error) {
 		console.error('Error saving annotation:', error);
 		res.status(500).json({ error: 'Failed to save annotation' });
-	}
-});
-
-// Update a knowledge unit
-router.put('/:id', async (req, res) => {
-	try {
-		const kuId = req.params.id;
-		const updatedKU = req.body;
-
-		if (kuId !== updatedKU.id) {
-			return res.status(400).json({ error: 'ID mismatch' });
-		}
-
-		const knowledgeUnits = await readJsonFile(
-			path.join(dataDir, 'annotations.json')
-		);
-		const index = knowledgeUnits.findIndex((ku) => ku.id === kuId);
-
-		if (index === -1) {
-			return res.status(404).json({ error: 'Knowledge unit not found' });
-		}
-
-		knowledgeUnits[index] = updatedKU;
-		await writeJsonFile(path.join(dataDir, 'annotations.json'), knowledgeUnits);
-
-		res.json(updatedKU);
-	} catch (error) {
-		console.error('Error updating annotation:', error);
-		res.status(500).json({ error: 'Failed to update annotation' });
 	}
 });
 
